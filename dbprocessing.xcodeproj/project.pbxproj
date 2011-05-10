@@ -1,0 +1,67 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXGroup section */
+		6645D0E81379E03A00B4AD75 = {
+			isa = PBXGroup;
+			children = (
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		6645D0EA1379E03A00B4AD75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Karlsruhe Institute of Technology";
+			};
+			buildConfigurationList = 6645D0ED1379E03A00B4AD75 /* Build configuration list for PBXProject "dbprocessing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6645D0E81379E03A00B4AD75;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		6645D0EF1379E03B00B4AD75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		6645D0F01379E03B00B4AD75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6645D0ED1379E03A00B4AD75 /* Build configuration list for PBXProject "dbprocessing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6645D0EF1379E03B00B4AD75 /* Debug */,
+				6645D0F01379E03B00B4AD75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6645D0EA1379E03A00B4AD75 /* Project object */;
+}
