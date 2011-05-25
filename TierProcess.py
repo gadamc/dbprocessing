@@ -47,7 +47,7 @@ class CopyProcess(TierProcess):
       target = args[1]
       kwargs are not used
     '''
-    shutil.copy( args[0], args[1])
+    return shutil.copy( args[0], args[1])
   
   def __init__(self, servername, dbname, tiername):
     
