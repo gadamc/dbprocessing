@@ -4,6 +4,11 @@ class TierProcess(object):
   '''   
     This is a generic Tier Processing class used to handle data processing
     based upon documents found in an instance of a CouchDB. 
+    In order for this to work, the function reference that you 
+    pass into this objects constructor must be of the form
+    
+    def myfunction(*args, **kwargs)
+    
   '''
   def __init__(self, servername, dbname, tiername, dofunction):
     self.sv = Server(servername)
@@ -12,11 +17,16 @@ class TierProcess(object):
     self.func = dofunction
     
 
-  def doprocess(self, doc, tierdict, *args, **kwargs):
-    
-    doc[str(self.name)] = tierdict
+  def doprocess(self,  *args, **kwargs):
 
-    self.func(*args, **kwargs)
+    return self.func(*args, **kwargs)
+    
+  
+  def record(self, doc, tierdict)
+    '''
+    Save the document to the database. 
+    '''
+    doc[str(self.name)] = tierdict
     
     if self.db.doc_exist(doc['_id']):
       doc['_rev'] = self.db.get_rev(doc['_id'])

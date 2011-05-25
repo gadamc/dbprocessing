@@ -10,5 +10,5 @@ tier = {}
 tier['newfile'] = 'newfile.txt'
 tier['hostname'] = '12.12.12.12'
 mcp = RemoteCopyProcess('http://127.0.0.1:5984', 'testdb', 'sccopy0')
-mcp.doprocess(doc, tier, 'testfile.txt','adam@134.158.176.27','newfile.txt')
-
+mcp.doprocess('testfile.txt','adam@134.158.176.27','newfile.txt')
+mcp.record(doc, tier)
