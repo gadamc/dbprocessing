@@ -9,29 +9,29 @@ class TierProcess(object):
     
     def myfunction(*args, **kwargs)
     
-  '''
+    '''
   def __init__(self, servername, dbname, tiername, dofunction):
     self.sv = Server(servername)
     self.db = self.sv.get_or_create_db(dbname)
     self.name = tiername
     self.func = dofunction
-    
-
+  
+  
   def doprocess(self,  *args, **kwargs):
-
-    return self.func(*args, **kwargs)
     
+    return self.func(*args, **kwargs)
+  
   
   def record(self, doc, tierdict)
-    '''
+  '''
     Save the document to the database. 
     '''
-    doc[str(self.name)] = tierdict
-    
-    if self.db.doc_exist(doc['_id']):
-      doc['_rev'] = self.db.get_rev(doc['_id'])
-    self.db.save_doc(doc)
-    return doc['_id']
+  doc[str(self.name)] = tierdict
+  
+  if self.db.doc_exist(doc['_id']):
+    doc['_rev'] = self.db.get_rev(doc['_id'])
+  self.db.save_doc(doc)
+  return doc['_id']
 
 
 class CopyProcess(TierProcess):
@@ -46,8 +46,8 @@ class CopyProcess(TierProcess):
       source = args[0]
       target = args[1]
       kwargs are not used
-    '''
-    return shutil.copy( args[0], args[1])
+      '''
+    return self.shutil.copy( args[0], args[1])
   
   def __init__(self, servername, dbname, tiername):
     
@@ -56,13 +56,13 @@ class CopyProcess(TierProcess):
 
 class RemoteCopyProcess(CopyProcess):
   '''   
-   This is a Remote Copy Processing class based on the TierProcess used to handle data processing
+    This is a Remote Copy Processing class based on the TierProcess used to handle data processing
     based upon documents found in an instance of a CouchDB. 
     Non-interactive authentication (SSL key sharing) should be set up between the two 
     machines used for the remote copying. Otherwise, user intervention will be 
     required when secure copy is called. This requires that the command 'scp' exists
     on the machine where this class is used. 
-  '''
+    '''
   import subprocess
   def copyfunction(self, *args, **kwargs):
     '''
@@ -89,7 +89,7 @@ class RemoteCopyProcess(CopyProcess):
       print 'incorrect number of args'
       return None
     
-    proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,)
+    proc = self.subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,)
     val = proc.communicate()[0]
     if val != '':
       print val

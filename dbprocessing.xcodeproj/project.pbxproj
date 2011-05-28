@@ -6,10 +6,19 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		6645D0F1137A5DC400B4AD75 /* TierProcess.py */ = {isa = PBXFileReference; path = TierProcess.py; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.python; };
+		6645D0F4137E00E500B4AD75 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		6645D0F5137F922F00B4AD75 /* test.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		6645D0E81379E03A00B4AD75 = {
 			isa = PBXGroup;
 			children = (
+				6645D0F1137A5DC400B4AD75 /* TierProcess.py */,
+				6645D0F4137E00E500B4AD75 /* __init__.py */,
+				6645D0F5137F922F00B4AD75 /* test.py */,
 			);
 			sourceTree = "<group>";
 		};
